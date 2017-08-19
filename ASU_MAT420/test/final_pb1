@@ -1,0 +1,9 @@
+FC = gfortran
+OPT = -Wall -O2 
+LIBS = -lblas -llapack
+pb1: pb1.o
+        @$(FC) $(OPT) $^ $(LIBS) -o  $@ 
+%.o: %.f90
+        @$(FC) $(OPT) -c $^
+~                                                                               
+~                              
